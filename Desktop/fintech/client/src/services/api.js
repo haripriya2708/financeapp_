@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://finance-backend-ukuv.onrender.com/api';
+
 
 // ✅ Add Transaction
 export const addTransaction = async (transaction) => {
