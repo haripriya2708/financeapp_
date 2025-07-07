@@ -1,0 +1,298 @@
+/* Base page background */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1a202c, #2d3748, #4a5568);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1rem 2rem;
+}
+
+
+/* Wrapper */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header section */
+.header-container {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.subheader-text {
+  font-size: 1.125rem;
+  color: #d1d5db;
+}
+
+.highlight {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #60a5fa;
+}
+
+/* Transparent glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: #60a5fa;
+}
+
+/* Summary cards grid */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.green-gradient {
+  background: linear-gradient(to bottom right, #16a34a, #166534);
+  border: 1px solid #22c55e;
+}
+.blue-gradient {
+  background: linear-gradient(to bottom right, #2563eb, #1e40af);
+  border: 1px solid #3b82f6;
+}
+.purple-gradient {
+  background: linear-gradient(to bottom right, #7c3aed, #4c1d95);
+  border: 1px solid #8b5cf6;
+}
+.orange-gradient {
+  background: linear-gradient(to bottom right, #f97316, #c2410c);
+  border: 1px solid #fb923c;
+}
+
+/* Slider styling */
+input[type="range"].slider {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #34d399, #3b82f6);
+  cursor: pointer;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #bfdbfe;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #bfdbfe;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Chip / Badge */
+.risk-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  color: white;
+}
+.risk-very-low { background-color: #16a34a; }
+.risk-low { background-color: #4ade80; }
+.risk-low-medium { background-color: #facc15; }
+.risk-medium { background-color: #f97316; }
+.risk-high { background-color: #ef4444; }
+.risk-very-high { background-color: #dc2626; }
+.risk-default { background-color: #6b7280; }
+
+/* Chart section */
+.chart-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Tips Section */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* General spacing and typography */
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.text-center { text-align: center; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+/* Investment Plan Card Variants */
+.plan-card {
+  @apply glass-card; /* reuse base transparent styling if you're using PostCSS. If not, just extend manually below */
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Distinct styles for each investment plan */
+.plan-card-1 {
+  background: linear-gradient(to bottom right, rgba(34,193,195,0.15), rgba(253,187,45,0.1));
+  border: 1px solid rgba(34,193,195,0.3);
+}
+
+.plan-card-2 {
+  background: linear-gradient(to bottom right, rgba(131,58,180,0.15), rgba(253,29,29,0.1));
+  border: 1px solid rgba(131,58,180,0.3);
+}
+
+.plan-card-3 {
+  background: linear-gradient(to bottom right, rgba(255,195,113,0.15), rgba(255,87,34,0.1));
+  border: 1px solid rgba(255,195,113,0.3);
+}
+
+.plan-card-4 {
+  background: linear-gradient(to bottom right, rgba(72,219,251,0.15), rgba(0,210,255,0.1));
+  border: 1px solid rgba(72,219,251,0.3);
+}
+/* Horizontal scroll container */
+.plan-cards-2x2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .plan-cards-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Add these new classes */
+.plan-card .card-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.plan-card .card-body {
+  padding-top: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-box .label {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-bottom: 0.2rem;
+}
+
+.detail-box .value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fefefe;
+}
+
+.explanation {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.explanation .section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+.explanation .text {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.info-box {
+  background-color: rgba(255,255,255,0.05);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  color: #cbd5e0;
+}
+
+.pros-cons {
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pros, .cons {
+  flex: 1;
+}
+
+.subheading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.pros ul, .cons ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  color: #cbd5e0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
